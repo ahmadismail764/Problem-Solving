@@ -4,28 +4,19 @@ using namespace std;
 int main()
 {
     int n, k;
-    string stages, rocket, new_stages = "";
-    cin >> n >> k >> stages;
-    sort(stages.begin(), stages.end());
-    for (int i = 1; i < stages.size(); i++)
-    {
-        char curr_char = stages[i], prev_char = stages[i - 1];
-        if (curr_char - prev_char >= 2)
-            new_stages += curr_char;
-    }
-    int h = 0;
-    while (rocket.size() < k && h < new_stages.size())
-    {
-        rocket.push_back(new_stages[h]);
-        ++h;
-    }
-    if (rocket.size() < k)
-        cout << -1;
-    else
-    {
-        int sum = 0;
-        for (int j = 0; j < k; j++)
-            sum += rocket[j] - 'a' + 1;
-        cout << sum;
-    }
+    string s;
+    cin >> n >> k >> s;
+    sort(s.begin(), s.end());
+    char last = 'a' - 2;
+    int ans = 0, len = 0;
+    for (int i = 0; i < n; i++)
+        if (s[i] >= last + 2)
+        {
+            last = s[i];
+            ans += s[i] - 'a' + 1;
+            len++;
+            if (len >= k)
+                cout << ans, exit(0);
+        }
+    cout << -1;
 }
