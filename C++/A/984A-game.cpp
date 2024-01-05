@@ -28,6 +28,5 @@ int main()
 {
     Solver solution;
     solution.input();
-    int y = solution.answer();
-    cout << y;
+    cout << solution.answer();
 }
