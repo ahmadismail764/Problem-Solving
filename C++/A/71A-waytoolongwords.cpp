@@ -6,8 +6,6 @@ int main()
 {
     int n, i;
     string word;
-    1 <= word.size() <= 100;
-    1 <= n <= 100;
     cin >> n;
     for (i = 0; i <= n; i++)
     {
