@@ -1,15 +1,15 @@
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main()
 {
     int n;
-    std::cin >> n;
+    cin >> n;
     int grav_box[n];
     for (int i = 0; i < n; i++)
-        std::cin >> grav_box[i];
-    std::sort(grav_box, grav_box + n);
+        cin >> grav_box[i];
+    sort(grav_box, grav_box + n);
     for (int x : grav_box)
-        std::cout << x << " ";
-    std::cout << '\n';
+        cout << x << " ";
+    cout << '\n';
 }

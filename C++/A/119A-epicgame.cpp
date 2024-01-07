@@ -4,9 +4,8 @@ int gcd(int x, int y) { return (x == 0) ? y : gcd(y % x, x); }
 
 int main()
 {
-    int a, b, n;
+    int a, b, n, k = 0;
     cin >> a >> b >> n;
-    int k = 0;
     while (n >= 0)
     {
         ++k;

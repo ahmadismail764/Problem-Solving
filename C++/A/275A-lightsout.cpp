@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -33,6 +33,6 @@ int main()
     {
         for (int j = 0; j < 3; j++)
             cout << state[i][j];
-        cout << endl;
+        cout << '\n';
     }
 }

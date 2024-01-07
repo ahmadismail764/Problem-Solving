@@ -1,7 +1,8 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
   int w;
   1 <= w <= 100;
   cin >> w;

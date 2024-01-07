@@ -1,14 +1,10 @@
-#include <iostream>
-#include <string>
-#include <unordered_set>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     string username, distinct;
-    username.size() <= 100;
     cin >> username;
     unordered_set<char> repeat;
-
     for (char c : username)
     {
         if (repeat.count(c) == 0)

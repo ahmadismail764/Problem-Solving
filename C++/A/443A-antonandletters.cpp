@@ -6,7 +6,6 @@ int main()
     string input;
     getline(cin, input);
     unordered_set<char> letters;
-
     for (char c : input)
     {
         if (c == '{' || c == '}' || c == ' ' || c == ',')

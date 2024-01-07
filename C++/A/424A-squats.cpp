@@ -8,13 +8,7 @@ int main()
     cin >> n >> pos;
     vector<int> x, X;
     for (int i = 0; i < n; i++)
-    {
-        if (pos[i] == 'x')
-            x.push_back(i);
-        else
-            X.push_back(i);
-    }
-
+        (pos[i] == 'x') ? x.push_back(i) : X.push_back(i);
     int c = x.size() - X.size();
     if (c > 0)
         for (int i = 0; i < c / 2; i++)
