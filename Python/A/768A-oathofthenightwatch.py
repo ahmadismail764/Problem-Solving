@@ -1,0 +1,5 @@
+stewards_count = int(input())
+stewards = list(map(int, input().split()))
+min_steward, max_steward = min(stewards), max(stewards)
+result = sum(1 for i in stewards if min_steward < i < max_steward)
+print(result)
