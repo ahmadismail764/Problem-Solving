@@ -1,4 +1,4 @@
 k = int(input())
 s = sorted(input())
-ans = s[::k]*k
-print([-1, "".join(ans)][sorted(ans) == s])
+ans = s[::k] * k
+print(ans if sorted(ans) == s else -1)
