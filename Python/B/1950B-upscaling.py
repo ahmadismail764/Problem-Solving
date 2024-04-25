@@ -13,8 +13,7 @@ for _ in range(t):
                     new += ".." if j % 2 else "##"
                 else:
                     new += "##" if j % 2 else ".."
-            flag ^= i%2
+            flag ^= i % 2
             answer.append(new)
         for string in answer:
             print(string)
-
