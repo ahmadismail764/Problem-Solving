@@ -5,5 +5,5 @@ for _ in range(tt):
     s = input()
     x = 0
     for char in string:
-        x += (m - s.count(char)) if s.count(char) > 0 else 0
+        x += (m - s.count(char)) if (m-s.count(char)) > 0 else 0
     print(x)
