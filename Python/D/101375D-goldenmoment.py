@@ -5,9 +5,6 @@ def calculate_total_ability(n, abilities):
     return total_ability
 
 
-# Read input
-n = int(input().strip())
-abilities = list(map(int, input().strip().split()))
-
-# Calculate and print the total ability
+n = int(input())
+abilities = list(map(int, input().split()))
 print(calculate_total_ability(n, abilities))
