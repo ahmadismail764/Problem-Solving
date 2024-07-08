@@ -1,5 +1,3 @@
-import sys
-input = sys.stdin.read
 n, k = (map(int, input().split()))
 a = list(map(int, input().split()))
 t = list(map(int, input().split()))
