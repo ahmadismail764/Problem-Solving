@@ -1,15 +1,18 @@
 n, k = map(int, input().split())
-theorems = list(map(int, input().split()))
-sleep_behavior = list(map(int, input().split()))
-sleep_string = ''.join(map(str, sleep_behavior))
-zero_count = float('-inf')
-curr_index = 0
-for i in range(k, n):
-    curr = sleep_string[i-k:i+1]
-    if curr.count('0') > zero_count:
-        zero_count = curr.count('0')
-        curr_index = i - k + 1
-for i in range(curr_index, curr_index + k):
-    if sleep_behavior[i] == 0:
-        sleep_behavior[i] = 1
-print(sum(theorems[i] for i in range(n) if sleep_behavior[i] == 1))
+a = list(map(int, input().split()))
+t = list(map(int, input().split()))
+overall = 0
+pr = [0] * n
+for i in range(n):
+    if i > 0:
+        pr[i] += pr[i - 1]
+    if t[i] == 0:
+        pr[i] += a[i]
+    else:
+        overall += a[i]
+
+add = 0
+for i in range(k - 1, n):
+    add = max(add, pr[i] - (pr[i - k] if i >= k else 0))
+
+print(overall + add)
