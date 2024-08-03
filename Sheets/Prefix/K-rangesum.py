@@ -15,3 +15,6 @@ for _ in range(q):
         prefix.insert(1, x)
         for i in range(2, len(prefix)):
             prefix[i] += x
+# The following is how to create a suffix array
+# for (int i = n + 1; i > 0; i--)
+#     suffix[i] = suffix[i + 1] + orig[i];
