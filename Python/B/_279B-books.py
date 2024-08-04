@@ -1,18 +1,12 @@
 n, t = map(int, input().split())
 books = list(map(int, input().split()))
 prefix = [0] * (n + 1)
-for i in range(1, n + 1):
-    prefix[i] = prefix[i - 1] + books[i - 1]
-start, end = 1, n
-time = prefix[end] - prefix[start - 1]
-while start <= end:
-    time = prefix[end] - prefix[start - 1]
-    if time < t:
-        print(end - start + 1)
-        exit()
-    elif time == t:
-        print(end - start + 1)
-        exit()
-    else:
+start, end, current_time, max_books = 0, 0, 0, 0
+while end < n:
+    current_time += books[end]
+    while current_time > t:
+        current_time -= books[start]
         start += 1
-print(0)
+    max_books = max(max_books, end - start + 1)
+    end += 1
+print(max_books)
