@@ -17,5 +17,4 @@ for end in range(n):
         if max_deque[0] < start:
             max_deque.popleft()
     ans = max(ans, end - start + 1)
-
 print(ans)
